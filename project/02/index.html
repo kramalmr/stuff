@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project 02</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "EB Garamond", serif;
+        background-color: #f7f7f7;
+        margin: 0;
+        padding: 0;
+      }
+
+      h2 {
+        text-align: left;
+        margin: 50px 0px 10px 40px;
+        font-size: 60px;
+      }
+
+      /* Style the entire paragraph */
+      #hover-text {
+        font-size: 50px;
+        line-height: 1.5;
+        word-wrap: break-word;
+      }
+
+      /* Style for each word wrapped in a span */
+      #hover-text span {
+        display: inline-block;
+        /* padding: ; */
+        transition: all 0.3s ease, transform 0.3s ease;
+        position: relative;
+        user-select: none;
+      }
+
+      #hover-text span:hover {
+        /* color: ; */
+        cursor: pointer;
+        padding: 0 3px;
+        font-weight: bold;
+        /* font-size: 17px; */
+      }
+
+      #hover-text span:hover::after {
+        content: "";
+        display: block;
+        /* margin-top: -3px; */
+        height: 80%;
+        position: absolute;
+        background-color: yellow;
+        animation: hoverEffect 0.3s ease forwards;
+        top: 14px;
+        left: -10px;
+        z-index: -1;
+      }
+
+      @keyframes hoverEffect {
+        0% {
+          width: 0;
+        }
+        100% {
+          width: 110%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Lorem Ipsum</h2>
+    <p id="hover-text">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, temporibus
+      accusantium molestiae iure quasi necessitatibus natus perferendis
+      repellendus, quis deleniti, ipsum at debitis. Tenetur obcaecati dolorum
+      ratione! Modi sapiente nobis maxime, similique aliquid amet at animi vel
+      ipsam alias beatae aspernatur ex facilis placeat! Voluptatum voluptate
+      soluta dolores praesentium eaque.
+    </p>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const paragraph = document.getElementById("hover-text");
+
+        // Get the text content of the paragraph
+        const text = paragraph.innerText;
+
+        // Split the text into words
+        const words = text.split(" ");
+
+        // Create a new array with each word wrapped in a <span> tag
+        const wordSpans = words.map((word) => `<span>${word}</span>`);
+
+        // Join the array back into a string of text with spaces and set the innerHTML of the paragraph
+        paragraph.innerHTML = wordSpans.join(" ");
+
+        // Select all the span elements inside the paragraph
+        const spans = paragraph.querySelectorAll("span");
+
+        spans.forEach((span) => {
+          const word = span.innerText;
+          span.addEventListener("mouseenter", function () {
+            function getRndInteger() {
+              return Math.floor(Math.random() * (10 - -10)) + -10;
+            }
+
+            function getRndInteger2(min, max) {
+              return Math.random() * (1.5 - 1) + 1;
+            }
+            span.style.transform = `rotate(${getRndInteger()}deg)`;
+            // span.style.transform = `scale(${getRndInteger2()})`;
+            console.log(getRndInteger());
+            span.innerText = "Habibie";
+          });
+
+          // Reset the scale when the mouse leaves
+          span.addEventListener("mouseleave", function () {
+            span.style.transform = "rotate(0deg)";
+            span.innerText = word;
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
