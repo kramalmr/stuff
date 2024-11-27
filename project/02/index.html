@@ -38,6 +38,7 @@
         transition: all 0.3s ease, transform 0.3s ease;
         position: relative;
         user-select: none;
+        z-index: 1;
       }
 
       #hover-text span:hover {
@@ -114,7 +115,7 @@
             span.style.transform = `rotate(${getRndInteger()}deg)`;
             // span.style.transform = `scale(${getRndInteger2()})`;
             console.log(getRndInteger());
-            span.innerText = "Habibie";
+            // span.innerText = "Habibie";
           });
 
           // Reset the scale when the mouse leaves
