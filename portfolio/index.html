@@ -1,35 +1,377 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Personal Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=VT323&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./src/style.css">
-</head>
-<body>
-    <div class="container">
-       <div id="wrapper">
-        <div id="wrapImg">
-            <img id="frameHero" src="assets/wooden-frame.png" alt="">
-            <img id="imgHero" src="https://cataas.com/cat" alt="">
+    <link rel="stylesheet" href="./src/style.css" />
+  </head>
+  <body onload="init()">
+    <!-- nav -->
+    <div id="nav">
+      <div class="marquee">
+        <div class="marquee-content">
+          <a class="navLink" onclick="gotoSectionAbout()">ABOUT</a>
+          <a class="navLink" onclick="gotoSectionProjects()">PROJECTS</a>
+          <a class="navLink" onclick="gotoSectionContact()">CONTACT</a>
+          <a class="navLink" onclick="gotoSectionAbout()">ABOUT</a>
+          <a class="navLink" onclick="gotoSectionProjects()">PROJECTS</a>
+          <a class="navLink" onclick="gotoSectionContact()">CONTACT</a>
         </div>
-       </div>
-        <div id="nameHero">
-            Muhammad Akram Almair
-        </div>
-        <div id="textHero">
-            
-            <br>
-            A Student and Web Developer Based in Indonesia with 0 years of experience
-        </div>
+      </div>
     </div>
-</div>
+
+    <!-- hero -->
+    <div class="container">
+      <div id="wrapper">
+        <div id="halo">I Dream of you almost every night.</div>
+        <div id="wrapImg" class="draggable">
+          <img id="frameHero" src="assets/wooden-frame-pixel.png" alt="" />
+          <img id="imgHero" src="./assets/cat-computer.gif" alt="" />
+        </div>
+      </div>
+      <div id="nameHero">Muhammad Akram Almair</div>
+      <div id="textHero">
+        <br />
+        A Student and Web Developer, Graphic Designer and a Code Enthusiast.
+      </div>
+    </div>
+
+    <!-- about    -->
+    <div id="about" class="containerAlt">
+      <div class="up-wrapper">
+        <button class="up-button">I want to go home.</button>
+      </div>
+      <h3 class="buttonAbout">
+        <img src="assets/icons/icon-1.png" alt="" draggable="false" />
+        <p>Who am I?</p>
+      </h3>
+      <h3 class="buttonAbout">
+        <img src="assets/icons/icon-2.png" alt="" draggable="false" />
+        <p>How did I get here?</p>
+      </h3>
+      <h3 class="buttonAbout">
+        <img src="assets/icons/icon-3.png" alt="" draggable="false" />
+        <p>My Focus</p>
+      </h3>
+      <h3 class="buttonAbout">
+        <img src="assets/icons/icon-4.png" alt="" draggable="false" />
+        <p>My Goals</p>
+      </h3>
+      <h3 class="buttonAbout">
+        <img src="assets/icons/icon-5.png" alt="" draggable="false" />
+        <p>Beyond study</p>
+      </h3>
+      <h3 class="buttonAbout">
+        <img src="assets/icons/icon-6.png" alt="" draggable="false" />
+        <p>What Ive Learned</p>
+      </h3>
+      <div id="aboutWindow">
+        <div class="windowAbout">
+          <div class="custom-cursor">Yo, That's me dawg</div>
+          <button class="closeWindowAbout">X</button>
+          <div class="windowAboutContent">
+            <div class="marquee2">
+              <div class="marquee2-content">
+                <h1>Who Am I?</h1>
+                <h1>Who Am I?</h1>
+                <h1>Who Am I?</h1>
+                <h1>Who Am I?</h1>
+                <h1>Who Am I?</h1>
+                <h1>Who Am I?</h1>
+              </div>
+            </div>
+
+            <p>
+              <img
+                class="floatingImage"
+                src="assets/about/pixelatedme.png"
+                alt=""
+                draggable="false"
+              />
+              This is Muhammad Akram Almair, 16 years old, Student, Graphic
+              Designer and a Web Developer.
+              <br />
+              I am currently learning web development and sometimes graphic
+              design.
+              <br />
+              I was born in Indonesia and still am in it.
+              <br />
+              I am currently in my 1st year of high school.
+              <br />
+              I am quite active on
+              <a href="https://github.com/kramalmr" target="_blank">github</a>
+              and discord as well.
+              <br />
+              I like chocolate.
+              <br />
+              I don't know what i can put here.
+            </p>
+          </div>
+        </div>
+        <div class="windowAbout">
+          <div class="custom-cursor">TK, SD Islam Al-Falaah</div>
+          <div class="custom-cursor">SMP, SMA Pondok Tahfizh Plus Abu Dzar</div>
+          <button class="closeWindowAbout">X</button>
+          <div class="windowAboutContent">
+            <div class="marquee2">
+              <div class="marquee2-content">
+                <h1>How did I get here?</h1>
+                <h1>How did I get here?</h1>
+                <h1>How did I get here?</h1>
+                <h1>How did I get here?</h1>
+                <h1>How did I get here?</h1>
+                <h1>How did I get here?</h1>
+              </div>
+            </div>
+            <h2 class="aboutTitleSchool">TK, SD Islam Al-Falaah</h2>
+            <h2>2012 - 2021</h2>
+            <p class="aboutText">
+              <img
+                class="floatingImage"
+                src="assets/about/school/sd.jpg"
+                alt=""
+                draggable="false"
+              />
+              I spent my early years at TK and SD Islam Al-Falaah in Ciputat. I
+              have never been curious to any specific field of study but I have
+              always been interested in learning new things. Since then, I have
+              been also playing games and watching foreign cartoons which led me
+              to having a good understanding in English and it also gave me a
+              wide interests in playing more games. At the last year of my
+              Elementary School, Ive opened a new interest in wanting to know
+              how games codes, commands, etc. work which then i gave huge
+              interests on. And now i knew that it was a good choice for me to
+              learn more about it.
+              <br />
+              <br />
+              Glancing back to my years of Elementary School, i remember that i
+              was always curious to know how games are made and how they work
+              which led me to learning a bit of it, but i never really focused
+              on learning it and it was futile work to me at the time, because i
+              had no idea where to head next.
+            </p>
+            <h2 class="aboutTitleSchool">
+              SMP, SMA Pondok Tahfizh Plus Abu Dzar
+            </h2>
+            <h2>2021 - now</h2>
+            <p class="aboutText">
+              <img
+                class="floatingImage"
+                src="assets/about/school/pondok.jpeg"
+                alt=""
+                draggable="false"
+              />
+              As I continue my educational journey, I am excited to pursue my
+              interests in programming and graphic design. Although here that
+              the school also provides me with religious lessons, they also gave
+              a focus on programming and coding. This is the reason why i
+              decided to join this school.
+
+              <br />
+              <br />
+
+              My time at this school made me more independent for myself and
+              non-relying on others. I was able to learn more about myself and
+              my surroundings and what purpose i want and i was destined to
+              achieve. I am still countinuing to be more capable to achieve my
+              goals and dreams.
+
+              <br />
+              <br />
+              At SMP, SMA Pondok Tahfizh Plus Abu Dzar, I have been learning
+              more about programming and coding. The school provides me with a
+              good environment to learn and focus on my interests. I am excited
+              to continue learning and growing in this field. I am excited to
+              see where this journey will take me and what kind of projects I
+              will be able to create in the future.
+            </p>
+            <p>
+              <br />
+              <br />
+              <b>@ Muhammad Akram Almair</b>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="windowAbout">
+        <button class="closeWindowAbout">X</button>
+        <div class="windowAboutContent">
+          <h1>Who Am I?</h1>
+
+          <p>
+            <img
+              class="floatingImage"
+              src="assets/pixelatedme.png"
+              alt=""
+              draggable="false"
+            />
+            This is Muhammad Akram Almair, 16 years old, Student, Graphic
+            Designer and a Web Developer.
+            <br />
+            I am currently learning web development and sometimes graphic
+            design.
+            <br />
+            I was born in Indonesia and still am in it.
+            <br />
+            I am currently in my 1st year of high school.
+            <br />
+            I am quite active on github and discord as well.
+            <br />
+            My github username is
+            <a href="https://github.com/kramalmr" target="_blank">@kramalmr</a>
+            feel free to check it out.
+          </p>
+        </div>
+      </div>
+      <div class="windowAbout">
+        <button class="closeWindowAbout">X</button>
+        <div class="windowAboutContent">
+          <h1>Who Am I?</h1>
+
+          <p>
+            <img
+              class="floatingImage"
+              src="assets/pixelatedme.png"
+              alt=""
+              draggable="false"
+            />
+            This is Muhammad Akram Almair, 16 years old, Student, Graphic
+            Designer and a Web Developer.
+            <br />
+            I am currently learning web development and sometimes graphic
+            design.
+            <br />
+            I was born in Indonesia and still am in it.
+            <br />
+            I am currently in my 1st year of high school.
+            <br />
+            I am quite active on github and discord as well.
+            <br />
+            My github username is
+            <a href="https://github.com/kramalmr" target="_blank">@kramalmr</a>
+            feel free to check it out.
+          </p>
+        </div>
+      </div>
+      <div class="windowAbout">
+        <button class="closeWindowAbout">X</button>
+        <div class="windowAboutContent">
+          <h1>Who Am I?</h1>
+
+          <p>
+            <img
+              class="floatingImage"
+              src="assets/pixelatedme.png"
+              alt=""
+              draggable="false"
+            />
+            This is Muhammad Akram Almair, 16 years old, Student, Graphic
+            Designer and a Web Developer.
+            <br />
+            I am currently learning web development and sometimes graphic
+            design.
+            <br />
+            I was born in Indonesia and still am in it.
+            <br />
+            I am currently in my 1st year of high school.
+            <br />
+            I am quite active on github and discord as well.
+            <br />
+            My github username is
+            <a href="https://github.com/kramalmr" target="_blank">@kramalmr</a>
+            feel free to check it out.
+          </p>
+        </div>
+      </div>
+      <div class="windowAbout">
+        <button class="closeWindowAbout">X</button>
+        <div class="windowAboutContent">
+          <h1>Who Am I?</h1>
+
+          <p>
+            <img
+              class="floatingImage"
+              src="assets/pixelatedme.png"
+              alt=""
+              draggable="false"
+            />
+            This is Muhammad Akram Almair, 16 years old, Student, Graphic
+            Designer and a Web Developer.
+            <br />
+            I am currently learning web development and sometimes graphic
+            design.
+            <br />
+            I was born in Indonesia and still am in it.
+            <br />
+            I am currently in my 1st year of high school.
+            <br />
+            I am quite active on github and discord as well.
+            <br />
+            My github username is
+            <a href="https://github.com/kramalmr" target="_blank">@kramalmr</a>
+            feel free to check it out.
+          </p>
+        </div>
+      </div>
+      <div class="windowAbout">
+        <button class="closeWindowAbout">X</button>
+        <div class="windowAboutContent">
+          <h1>Who Am I?</h1>
+
+          <p>
+            <img
+              class="floatingImage"
+              src="assets/pixelatedme.png"
+              alt=""
+              draggable="false"
+            />
+            This is Muhammad Akram Almair, 16 years old, Student, Graphic
+            Designer and a Web Developer.
+            <br />
+            I am currently learning web development and sometimes graphic
+            design.
+            <br />
+            I was born in Indonesia and still am in it.
+            <br />
+            I am currently in my 1st year of high school.
+            <br />
+            I am quite active on github and discord as well.
+            <br />
+            My github username is
+            <a href="https://github.com/kramalmr" target="_blank">@kramalmr</a>
+            feel free to check it out.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Projects -->
+
+    <div class="containerAlt" id="projects">
+      <div class="up-wrapper">
+        <button id="up" class="up-button">I want to go home.</button>
+      </div>
+      <h1>Projects</h1>
+      <p>Here are some of the projects I have made.</p>
+    </div>
+
+    <!-- Contact -->
+
+    <div class="containerAlt" id="contact">
+      <div class="up-wrapper">
+        <button id="up" class="up-button">I want to go home.</button>
+      </div>
+      <h1>Contact</h1>
+      <p>Here are some of the projects I have made.</p>
+    </div>
+
     <script src="./src/script.js"></script>
-</body>
+  </body>
 </html>

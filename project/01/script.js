@@ -14,7 +14,6 @@ const submit = document.getElementById("submit");
 
 // function overflowOff() {box.style.overflow = "visible";}
 
-
 // HOVER
 
 const paragraph = document.getElementById("text");
@@ -42,7 +41,3 @@ spans.forEach((span) => {
 submit.addEventListener("click", () => {
   alert("Button Clicked");
 });
-
-
-
-
